@@ -19,7 +19,7 @@ jobs:
         with:
           verb: run
           args: go run ./pkg/build/e2e --package=grafana.tar.gz --suite=various-suite
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: e2e-various-${{github.run_number}}
